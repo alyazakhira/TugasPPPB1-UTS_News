@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/item_title_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sample Title"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/item_category_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category:"
+        android:layout_below="@id/item_title_news"/>
+
+    <TextView
+        android:id="@+id/item_age_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Minimal Age: "
+        android:layout_below="@id/item_category_news"/>
+
+</RelativeLayout>
