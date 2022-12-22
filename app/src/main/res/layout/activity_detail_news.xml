@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="15dp"
-    android:layout_marginTop="30dp"
+    android:layout_marginTop="25dp"
     android:layout_marginRight="15dp"
     android:layout_marginBottom="25dp"
     tools:context=".DetailNewsActivity">
@@ -29,50 +29,44 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/detail_layout_category"
+            android:id="@+id/detail_layout_writer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/detail_category_header"
-                android:layout_width="match_parent"
+                android:id="@+id/detail_writer_header"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Category  : "
-                android:textAlignment="textEnd" />
+                android:text="Penulis : " />
 
             <TextView
-                android:id="@+id/detail_category"
+                android:id="@+id/detail_writer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="lorem" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/detail_layout_age"
+            android:id="@+id/detail_layout_source"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/detail_age_header"
-                android:layout_width="match_parent"
+                android:id="@+id/detail_source_header"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Min. Age  : "
-                android:textAlignment="textEnd" />
+                android:text="Sumber : " />
 
             <TextView
-                android:id="@+id/detail_age"
+                android:id="@+id/detail_source"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="999" />
+                android:text="lorem" />
 
         </LinearLayout>
 

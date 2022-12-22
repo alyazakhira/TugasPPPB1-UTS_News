@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp">
+    android:layout_margin="10dp">
 
     <TextView
         android:id="@+id/item_title_news"
@@ -10,22 +10,63 @@
         android:layout_height="wrap_content"
         android:text="Sample Title"
         android:textSize="16sp"
-        android:textStyle="bold"/>
+        android:maxLines="1"
+        android:textStyle="bold"
+        android:layout_marginBottom="3dp"/>
 
-    <TextView
-        android:id="@+id/item_category_news"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Category:"
-        android:layout_below="@id/item_title_news"/>
-
-    <TextView
-        android:id="@+id/item_age_news"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:text="Minimal Age: "
-        android:layout_below="@id/item_category_news"/>
+        android:id="@+id/item_layout_info"
+        android:orientation="horizontal"
+        android:layout_below="@id/item_title_news">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_layout_category"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_category_header"
+                android:text="Category: "/>
+
+            <TextView
+                android:id="@+id/item_category_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_layout_age"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_age_header"
+            android:text="Minimal Age: "/>
+
+        <TextView
+            android:id="@+id/item_age_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="999"/>
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>

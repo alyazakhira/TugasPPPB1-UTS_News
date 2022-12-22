@@ -72,6 +72,14 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/input_info_usage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_layout_spinner"
+        android:text="Data digunakan semata-mata untuk kepentingan preferensi berita."
+        android:textSize="13sp" />
+
     <Button
         android:id="@+id/input_data_btn"
         android:layout_width="match_parent"

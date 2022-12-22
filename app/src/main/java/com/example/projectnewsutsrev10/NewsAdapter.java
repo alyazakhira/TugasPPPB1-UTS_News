@@ -32,11 +32,17 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
+//        assign variable with news attribute
         News newsItem = newsList.get(position);
         String nTitle = newsItem.title;
         String nCategory = newsItem.category;
         String nAge = Integer.toString(newsItem.minimumAge);
         String nContent = newsItem.content;
+        String nWriter = newsItem.writer;
+        String nSource = newsItem.source;
+
+//        showing attribute on holder in recycle view
         holder.iNewsTitle.setText(nTitle);
         holder.iNewsCategory.setText(nCategory);
         holder.iNewsAge.setText(nAge);
@@ -46,8 +52,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
             public void onClick(View view) {
                 Intent detailNewsIntent = new Intent(view.getContext(),DetailNewsActivity.class);
                 detailNewsIntent.putExtra("TITLE",nTitle);
-                detailNewsIntent.putExtra("NEWSCATEGORY",nCategory);
-                detailNewsIntent.putExtra("MINAGE",nAge);
+                detailNewsIntent.putExtra("WRITER",nWriter);
+                detailNewsIntent.putExtra("SOURCE",nSource);
                 detailNewsIntent.putExtra("CONTENT",nContent);
                 view.getContext().startActivity(detailNewsIntent);
             }
